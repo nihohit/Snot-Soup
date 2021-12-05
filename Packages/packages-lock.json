@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.totem.totemdb": {
+      "version": "https://github.com/Totem-gdn/TotemDBUnity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "42ec5e599c874551bf7d92bd0ff80b36aaafa7dd"
+    },
     "com.unity.collab-proxy": {
       "version": "1.5.7",
       "depth": 0,

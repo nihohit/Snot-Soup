@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
+  m_Name: WormsModel
+  m_EditorClassIdentifier: 
+  ingredientName: Worms
+  size: 0.29
+  calories: 0.21
+  minerals: 0.73
+  vitamins: 0.26
+  saltiness: 0.22
+  bitterness: 0.61
+  acidicPhLevel: 0.28
+  sourSweetLevel: -0.29
+  freedomForDefects: 0.62
+  viscosity: 0.26

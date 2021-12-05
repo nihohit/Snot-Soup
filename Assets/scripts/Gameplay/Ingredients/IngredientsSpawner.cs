@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SnotSoup.Gameplay.Ingredients {
     public class IngredientsSpawner : MonoBehaviour {
-        [SerializeField] private SimpleObjectPool pool;
+        [SerializeField] private RandomObjectPool pool;
 
         public static Action<Vector3> OnRespawnIngredient;
         public static Action<GameObject> OnReturnIngredientToPool;

@@ -3,6 +3,6 @@
 namespace CzernyStudio.Utilities {
 	public class PooledObject : MonoBehaviour
 	{
-		public SimpleObjectPool pool { get; set; }
+		public RandomObjectPool pool { get; set; }
 	}
 }

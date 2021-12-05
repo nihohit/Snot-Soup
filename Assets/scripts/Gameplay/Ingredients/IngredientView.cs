@@ -29,9 +29,9 @@ namespace SnotSoup.Gameplay.Ingredients{
 
         protected void OnCollisionEnter(Collision collision)
         {
-            if (collision.other.CompareTag("Cauldron"))
+            if (collision.gameObject.CompareTag("Cauldron"))
             {
-                var c = collision.other.GetComponent<Cauldron>();
+                var c = collision.gameObject.GetComponent<Cauldron>();
                 c.Add(model);
                 IngredientsSpawner.OnRespawnIngredient(_spawnPosition);
                 IngredientsSpawner.OnReturnIngredientToPool(gameObject);

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace SnotSoup.Gameplay.Ingredients {
@@ -31,6 +32,7 @@ namespace SnotSoup.Gameplay.Ingredients {
         [Range(0f,1f)]
         [SerializeField] private float viscosity;
 
+        #region Properties
         public string Name {
             get { return ingredientName; }
         }
@@ -93,14 +95,22 @@ namespace SnotSoup.Gameplay.Ingredients {
             get {
                 return viscosity;
             }
-            set {
-                viscosity = value;
-            }
         }
 
         public float SoupImpactScore {
             get { return size; }
-            set { size = value; }
         }
+        
+        #endregion
+
+        protected void OnEnable() {
+            
+        }
+
+        private float CalculatedImpact() {
+            var impactScore = 0f;
+            
+        }
+        
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cauldron : MonoBehaviour
 {
     [SerializeField] Transform _ingredientDrop;
+    public Vector3 IngredientDrop { get { return _ingredientDrop.position; } }
 
     private List<SnotSoup.Gameplay.Ingredients.IngredientModel> ingredients = new List<SnotSoup.Gameplay.Ingredients.IngredientModel>();
 
@@ -13,7 +14,7 @@ public class Cauldron : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             var p = other.GetComponent<Player>();
-            p.SetIngredientDrop(_ingredientDrop);
+            p.SetCauldron(this);
         }
     }
 
@@ -22,7 +23,7 @@ public class Cauldron : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             var p = other.GetComponent<Player>();
-            p.SetIngredientDrop(null);
+            p.SetCauldron(null);
         }
     }
 

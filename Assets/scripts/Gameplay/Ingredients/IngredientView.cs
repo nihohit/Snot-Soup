@@ -4,6 +4,8 @@ namespace SnotSoup.Gameplay.Ingredients{
     public class IngredientView : MonoBehaviour {
         [SerializeField] private IngredientModel model;
 
+        public string Name { get { return model.Name; } }
+
         public IngredientModel IngredientModel {
             get {
                 return model;

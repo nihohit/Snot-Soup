@@ -26,9 +26,9 @@ public class Player : MonoBehaviour {
     }
     _smallPromptBox.SetActive(true);
     if (_target != null && _target != _pickedItem) {
-      _descriptionText.text = "Target";
+      _descriptionText.text = _target.Name;
     } else {
-      _descriptionText.text = "picked";
+      _descriptionText.text = _pickedItem.Name;
     }
   }
 

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace SnotSoup.Gameplay.Ingredients {
@@ -102,14 +101,5 @@ namespace SnotSoup.Gameplay.Ingredients {
         }
         
         #endregion
-
-        protected void OnEnable() {
-            
-        }
-
-        private float CalculatedImpact() {
-            var impactScore = 0f;
-            return impactScore;
-        }
     }
 }

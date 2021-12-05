@@ -9,6 +9,16 @@ namespace SnotSoup.Gameplay.Ingredients{
                 return model;
             }
         }
+
+        protected void OnCollisionEnter(Collision collision)
+        {
+            if (collision.other.CompareTag("Cauldron"))
+            {
+                var c = collision.other.GetComponent<Cauldron>();
+                c.Add(model);
+                Destroy(gameObject);
+            }
+        }
     }
 }
 

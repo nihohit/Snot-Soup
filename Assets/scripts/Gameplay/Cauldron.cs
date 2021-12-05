@@ -6,6 +6,8 @@ public class Cauldron : MonoBehaviour
 {
     [SerializeField] Transform _ingredientDrop;
 
+    private List<SnotSoup.Gameplay.Ingredients.IngredientModel> ingredients = new List<SnotSoup.Gameplay.Ingredients.IngredientModel>();
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -22,5 +24,10 @@ public class Cauldron : MonoBehaviour
             var p = other.GetComponent<Player>();
             p.SetIngredientDrop(null);
         }
+    }
+
+    public void Add(SnotSoup.Gameplay.Ingredients.IngredientModel ingredient)
+    {
+        ingredients.Add(ingredient);
     }
 }

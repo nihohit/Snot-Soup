@@ -11,6 +11,11 @@ namespace SnotSoup {
 
   public class CookingInputs {
       public List<IngredientModel> Ingredients = new List<IngredientModel>();
+
+        public CookingInputs(List<IngredientModel> ingredients)
+        {
+            Ingredients = ingredients;
+        }
   }
 
   public class ResultCalculator {

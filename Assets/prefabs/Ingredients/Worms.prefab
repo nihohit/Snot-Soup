@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Worms
       objectReference: {fileID: 0}
+    - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 11400000, guid: 063c915fe4f7c4793b959c26bf7e2dc2, type: 2}
     - target: {fileID: 8653321594744481807, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

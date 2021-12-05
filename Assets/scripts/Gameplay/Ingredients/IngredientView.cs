@@ -1,18 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using SnotSoup.Gameplay.Ingredients;
 using UnityEngine;
 
-public class IngredientView : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public class IngredientView : MonoBehaviour {
+    [SerializeField] private IngredientModel model;
 }

@@ -25,11 +25,7 @@ public class Player : MonoBehaviour {
       return;
     }
     _smallPromptBox.SetActive(true);
-    if (_target != null && _target != _pickedItem) {
-      _descriptionText.text = "Target";
-    } else {
-      _descriptionText.text = "picked";
-    }
+    _descriptionText.text = (_target == null ? _pickedItem : _target).
   }
 
   public void SetPickupTarget(IngredientPicker target) {

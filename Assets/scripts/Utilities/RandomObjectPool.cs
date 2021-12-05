@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace CzernyStudio.Utilities {
-	public class SimpleObjectPool : MonoBehaviour {
+	public class RandomObjectPool : MonoBehaviour {
 		[SerializeField] GameObject[] pooledPrefabs;
 
 		public GameObject[] PooledPrefabs {

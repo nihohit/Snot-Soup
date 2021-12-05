@@ -7,7 +7,7 @@ namespace SnotSoup.Gameplay.Ingredients {
     public string Name { get { return model.Name; } }
     public string Description { get { return model.Description; } }
 
-    private Vector3 _initialPosition;
+    private Vector3 _spawnPosition;
 
     public IngredientModel IngredientModel {
       get {
@@ -15,23 +15,28 @@ namespace SnotSoup.Gameplay.Ingredients {
       }
     }
 
-    public Vector3 InitialPosition {
+    public Vector3 SpawnPosition {
       get {
-        return _initialPosition;
+        return _spawnPosition;
+      }
+      set {
+        _spawnPosition = value;
       }
     }
 
     protected void Awake() {
-      _initialPosition = transform.localPosition;
+      _spawnPosition = transform.localPosition;
     }
 
     protected void OnCollisionEnter(Collision collision) {
-      if (collision.other.CompareTag("Cauldron")) {
-        var c = collision.other.GetComponent<Cauldron>();
+      if (collision.gameObject.CompareTag("Cauldron")) {
+        var c = collision.gameObject.GetComponent<Cauldron>();
         c.Add(model);
-        Destroy(gameObject);
+        IngredientsSpawner.OnRespawnIngredient(_spawnPosition);
+        IngredientsSpawner.OnReturnIngredientToPool(gameObject);
       }
     }
   }
+}
 }
 

@@ -7,7 +7,7 @@ namespace SnotSoup {
   }
 
   public class CookingInputs {
-
+      
   }
 
   public class ResultCalculator {

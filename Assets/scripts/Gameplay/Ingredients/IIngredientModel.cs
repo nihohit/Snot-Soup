@@ -5,5 +5,4 @@ public interface IIngredientModel {
     float Vorticity { get; set; }
     float Viscosity { get; set; }
     int SoupImpactScore { get; set; }
-    
 }

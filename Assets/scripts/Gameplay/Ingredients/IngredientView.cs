@@ -4,7 +4,7 @@ namespace SnotSoup.Gameplay.Ingredients{
     public class IngredientView : MonoBehaviour {
         [SerializeField] private IngredientModel model;
 
-        private Vector3 _initialPosition;
+        private Vector3 _spawnPosition;
         
         public IngredientModel IngredientModel {
             get {
@@ -12,14 +12,17 @@ namespace SnotSoup.Gameplay.Ingredients{
             }
         }
 
-        public Vector3 InitialPosition {
+        public Vector3 SpawnPosition {
             get {
-                return _initialPosition;
+                return _spawnPosition;
+            }
+            set {
+                _spawnPosition = value;
             }
         }
 
         protected void Awake() {
-            _initialPosition = transform.localPosition;
+            _spawnPosition = transform.localPosition;
         }
 
         protected void OnCollisionEnter(Collision collision)

@@ -10,29 +10,32 @@ public class Player : MonoBehaviour {
   private IngredientPicker _pickedItem;
   private Cauldron _cauldron;
 
-  private GameObject _ingredientDescriptionView;
-  private TMP_Text _ingredientDescription;
+  private GameObject _smallPromptBox;
+  private TMP_Text _descriptionText;
 
   private void Start() {
-    _ingredientDescriptionView = GameObject.Find("IngredientDescription");
-    _ingredientDescription = _ingredientDescriptionView.transform.Find("Text").GetComponent<TMP_Text>();
+    _smallPromptBox = GameObject.Find("SmallPromptBox");
+    _descriptionText = _smallPromptBox.transform.Find("Text").GetComponent<TMP_Text>();
     setIngredientDescription();
   }
 
   private void setIngredientDescription() {
     if (_target == null && _pickedItem == null) {
-      _ingredientDescriptionView.SetActive(false);
+      _smallPromptBox.SetActive(false);
       return;
     }
-    _ingredientDescriptionView.SetActive(true);
+    _smallPromptBox.SetActive(true);
     if (_target != null && _target != _pickedItem) {
-      _ingredientDescription.text = "Target";
+      _descriptionText.text = "Target";
     } else {
-      _ingredientDescription.text = "picked";
+      _descriptionText.text = "picked";
     }
   }
 
   public void SetPickupTarget(IngredientPicker target) {
+    if (target == _pickedItem) {
+      return;
+    }
     _target = target;
     setIngredientDescription();
   }

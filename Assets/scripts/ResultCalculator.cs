@@ -70,7 +70,9 @@ namespace SnotSoup {
         ? -1f
         : acidicValue / ingredients.Count;
       var normalizedBitterness = bitterness / ingredients.Count;
-      var normalizedSourSweetLevel = sourSweetLevel / ingredients.Count;
+      var normalizedSourSweetLevel = sourSweetLevel / ingredients.Count > 0.7f || sourSweetLevel / ingredients.Count < - 0.7f
+        ? -1f
+        : sourSweetLevel / ingredients.Count;
       //Salt if above 0.8f or below 0.2f = yuk! => -1f!
       var normalizedSaltiness = saltiness / ingredients.Count > 0.8f || saltiness / ingredients.Count < 0.2f
         ? -1f
@@ -91,14 +93,17 @@ namespace SnotSoup {
       var ingredients = inputs.Ingredients;
       var computedLooks = 0f;
       var freedomForDefect = 0f;
-      var viscocity = 0f;
+      var viscosity = 0f;
 
       for (int i = 0; i < ingredients.Count; i++) {
         freedomForDefect += ingredients[i].FreedomForDefects;
-        viscocity += ingredients[i].Viscosity;
+        viscosity += ingredients[i].Viscosity;
       }
 
-      computedLooks = freedomForDefect * viscocity;
+      var normalizedFOD = freedomForDefect / ingredients.Count;
+      var normalizedViscosity = viscosity / ingredients.Count;
+
+      computedLooks = (normalizedFOD * 0.7f * -1f) + (normalizedViscosity * 0.3f * -1f);
       
       return computedLooks;
     }

@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 875768501}
   - component: {fileID: 875768500}
   m_Layer: 5
-  m_Name: IngredientDescription
+  m_Name: SmallPromptBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

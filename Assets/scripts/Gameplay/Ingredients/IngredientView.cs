@@ -3,6 +3,7 @@ using UnityEngine;
 namespace SnotSoup.Gameplay.Ingredients{
     public class IngredientView : MonoBehaviour {
         [SerializeField] private IngredientModel model;
+        [SerializeField] private IngredientPicker _picker;
 
         public string Name { get { return model.Name; } }
 
@@ -33,6 +34,7 @@ namespace SnotSoup.Gameplay.Ingredients{
             {
                 var c = collision.gameObject.GetComponent<Cauldron>();
                 c.Add(model);
+                _picker.enabled = true;
                 IngredientsSpawner.OnRespawnIngredient(_spawnPosition);
                 IngredientsSpawner.OnReturnIngredientToPool(gameObject);
             }

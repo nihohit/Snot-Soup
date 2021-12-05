@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 11400000, guid: 3a307500e969d403f8c631431a109e09, type: 2}
+  _picker: {fileID: 1266180403988457962}
 --- !u!114 &2785678558545959494
 MonoBehaviour:
   m_ObjectHideFlags: 0

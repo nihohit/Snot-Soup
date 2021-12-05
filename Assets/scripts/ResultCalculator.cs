@@ -63,8 +63,28 @@ namespace SnotSoup {
         saltiness += ingredients[i].Saltiness;
       }
 
-      // Multiply by -1 for values which give negative impact, and multiply by 0.5 for values which give best effort at its center
-      computedYumminess = size * vitamins * minerals * (0.5f * acidicValue) * (-1 * bitterness) * sourSweetLevel * (0.5f * saltiness);
+      var normalizedVitamins=  vitamins / ingredients.Count;
+      var normalizedMinerals = minerals / ingredients.Count;
+      var normalizedSize = size / ingredients.Count;
+      var normalizedAcidicValue = acidicValue / ingredients.Count > 0.7f || acidicValue / ingredients.Count < 0.3f
+        ? -1f
+        : acidicValue / ingredients.Count;
+      var normalizedBitterness = bitterness / ingredients.Count;
+      var normalizedSourSweetLevel = sourSweetLevel / ingredients.Count > 0.7f || sourSweetLevel / ingredients.Count < - 0.7f
+        ? -1f
+        : sourSweetLevel / ingredients.Count;
+      //Salt if above 0.8f or below 0.2f = yuk! => -1f!
+      var normalizedSaltiness = saltiness / ingredients.Count > 0.8f || saltiness / ingredients.Count < 0.2f
+        ? -1f
+        : saltiness / ingredients.Count;
+
+      computedYumminess = (normalizedVitamins * 0.05f)  +
+                          (normalizedMinerals * 0.05f) +
+                          (normalizedSize * 0.1f) +
+                          (normalizedAcidicValue * 0.2f) +
+                          (normalizedBitterness * 0.2f * -1f) +
+                          (normalizedSourSweetLevel * 0.2f) +
+                          (normalizedSaltiness * 0.2f);
 
       return computedYumminess;
     }
@@ -73,14 +93,17 @@ namespace SnotSoup {
       var ingredients = inputs.Ingredients;
       var computedLooks = 0f;
       var freedomForDefect = 0f;
-      var viscocity = 0f;
+      var viscosity = 0f;
 
       for (int i = 0; i < ingredients.Count; i++) {
         freedomForDefect += ingredients[i].FreedomForDefects;
-        viscocity += ingredients[i].Viscosity;
+        viscosity += ingredients[i].Viscosity;
       }
 
-      computedLooks = freedomForDefect * viscocity;
+      var normalizedFOD = freedomForDefect / ingredients.Count;
+      var normalizedViscosity = viscosity / ingredients.Count;
+
+      computedLooks = (normalizedFOD * 0.7f * -1f) + (normalizedViscosity * 0.3f * -1f);
       
       return computedLooks;
     }

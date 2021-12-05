@@ -11,19 +11,19 @@ namespace Soupish {
   }
 
   public class ResultCalculator {
-    private float computeToxicity(CookingInputs inputs) {
+    private static float computeToxicity(CookingInputs inputs) {
       return 1.0f;
     }
 
-    private float computeYumminess(CookingInputs inputs) {
+    private static float computeYumminess(CookingInputs inputs) {
       return 1.0f;
     }
 
-    private float computeLooks(CookingInputs inputs) {
+    private static float computeLooks(CookingInputs inputs) {
       return 1.0f;
     }
 
-    public FinishedSoup getSoupResult(CookingInputs inputs) {
+    public static FinishedSoup getSoupResult(CookingInputs inputs) {
       return new FinishedSoup{
         toxicity = computeToxicity(inputs),
         yumminess = computeYumminess(inputs),

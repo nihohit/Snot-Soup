@@ -22,6 +22,7 @@ namespace SnotSoup {
       var size = 0f;
       var calories = 0f;
       
+      //1. first calculate the values into one value "pool"
       for (int i = 0; i < ingredients.Count; i++) {
         acidity += ingredients[i].AcidicPhLevel;
         freedomOfDefect += ingredients[i].FreedomForDefects;
@@ -29,7 +30,15 @@ namespace SnotSoup {
         calories += ingredients[i].Calories;
       }
 
-      computedToxicity = acidity * freedomOfDefect * size * calories;
+      //2. normalize the values
+      var normalizedAcidity = acidity / ingredients.Count;
+      var normalizedFOD = freedomOfDefect / ingredients.Count;
+      var normalizedSize = size / ingredients.Count;
+      var normalizedCalories = calories / ingredients.Count;
+      
+      //3. give weight to values
+      computedToxicity = (0.15f * normalizedAcidity) + (0.35f * normalizedFOD) +  (0.35f * normalizedSize) + (0.15f * normalizedCalories);
+      
       return computedToxicity;
     }
 

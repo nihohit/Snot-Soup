@@ -44,4 +44,9 @@ public class IngredientPicker : MonoBehaviour
         _rb.isKinematic = false;
         _ingredient.transform.parent = null;
     }
+
+    public void SetPosition(Vector3 pos)
+    {
+        _ingredient.transform.position = pos;
+    }
 }

@@ -33,7 +33,7 @@ public class Player : MonoBehaviour {
   }
 
   public void SetPickupTarget(IngredientPicker target) {
-    if (target == _pickedItem) {
+    if (target == _pickedItem && target != null) {
       return;
     }
     _target = target;

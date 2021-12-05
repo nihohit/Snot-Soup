@@ -3,9 +3,13 @@ using UnityEngine.UI;
 
 namespace SnotSoup {
 
+  public enum FeedingResponse { Ate, Refused };
+
   public class BossGameObject : MonoBehaviour {
     private Slider healthSlider;
     private Slider hangerSlider;
+
+    private Mood lastMood = Mood.Happy;
 
     private void Start() {
       var slider = GameObject.Find("HealthSlider");
@@ -15,10 +19,28 @@ namespace SnotSoup {
     }
 
     private void Update() {
+      if (lastMood == Mood.Dead) {
+        return;
+      }
+
       Boss.Tick();
       healthSlider.value = Boss.Health / Boss.MAX_HEALTH;
       hangerSlider.value = Boss.Hangriness / Boss.MAX_HANGER;
+
+      var mood = Boss.getMood();
+      if (mood == lastMood) {
+        return;
+      }
+      // TODO - do something
+      lastMood = mood;
+    }
+
+    public FeedingResponse TryFeed(FinishedSoup soup) {
+      if (!Boss.willingToEat(soup)) {
+        return FeedingResponse.Refused;
+      }
+      Boss.Feed(soup);
+      return FeedingResponse.Ate;
     }
   }
-
 }

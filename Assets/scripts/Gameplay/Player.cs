@@ -26,14 +26,14 @@ public class Player : MonoBehaviour {
     }
     _smallPromptBox.SetActive(true);
     if (_target != null && _target != _pickedItem) {
-      _descriptionText.text = "Target";
+      _descriptionText.text = _target.Name;
     } else {
-      _descriptionText.text = "picked";
+      _descriptionText.text = _pickedItem.Name;
     }
   }
 
   public void SetPickupTarget(IngredientPicker target) {
-    if (target == _pickedItem) {
+    if (target == _pickedItem && target != null) {
       return;
     }
     _target = target;

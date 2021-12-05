@@ -6,9 +6,13 @@ public class IngredientPicker : MonoBehaviour {
   [SerializeField] GameObject _ingredient;
 
   private Rigidbody _rb;
+    private SnotSoup.Gameplay.Ingredients.IngredientView _ingredientView;
+
+    public string Name { get { return _ingredientView.Name; } }
 
   protected void Start() {
     _rb = _ingredient.GetComponent<Rigidbody>();
+        _ingredientView = _ingredient.GetComponent<SnotSoup.Gameplay.Ingredients.IngredientView>();
   }
 
   private void OnTriggerEnter(Collider other) {

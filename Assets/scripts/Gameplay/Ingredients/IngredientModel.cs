@@ -109,8 +109,7 @@ namespace SnotSoup.Gameplay.Ingredients {
 
         private float CalculatedImpact() {
             var impactScore = 0f;
-            
+            return impactScore;
         }
-        
     }
 }

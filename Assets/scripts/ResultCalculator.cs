@@ -1,4 +1,4 @@
-namespace Soupish {
+namespace SnotSoup {
 
   public class FinishedSoup {
     public float toxicity;
@@ -24,7 +24,7 @@ namespace Soupish {
     }
 
     public static FinishedSoup getSoupResult(CookingInputs inputs) {
-      return new FinishedSoup{
+      return new FinishedSoup {
         toxicity = computeToxicity(inputs),
         yumminess = computeYumminess(inputs),
         looks = computeLooks(inputs)

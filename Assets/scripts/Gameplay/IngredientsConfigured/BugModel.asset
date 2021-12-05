@@ -10,9 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
-  m_Name: CricketModel
+  m_Name: BugModel
   m_EditorClassIdentifier: 
-  name: Cricket
-  vorticity: 0
-  viscosity: 0
-  soupImpactScore: 0
+  ingredientName: Bug
+  size: 0.4
+  calories: 0.22
+  minerals: 0.8
+  vitamins: 0.24
+  saltiness: 0.73
+  bitterness: 0.77
+  acidicPhLevel: 0.38
+  sourSweetLevel: 0.17
+  freedomForDefects: 0.7
+  viscosity: 0.21

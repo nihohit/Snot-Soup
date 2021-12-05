@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
   m_Name: WhiteCheeseModel
   m_EditorClassIdentifier: 
-  name: WhiteCheese
-  vorticity: 0
-  viscosity: 0
-  soupImpactScore: 0
+  ingredientName: WhiteCheese
+  size: 0.29
+  calories: 0.45
+  minerals: 0.63
+  vitamins: 0.48
+  saltiness: 0.34
+  bitterness: 0.22
+  acidicPhLevel: 0.68
+  sourSweetLevel: -0.32
+  freedomForDefects: 0.89
+  viscosity: 0.3

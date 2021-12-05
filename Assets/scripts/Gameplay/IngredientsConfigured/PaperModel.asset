@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
   m_Name: PaperModel
   m_EditorClassIdentifier: 
-  name: Paper
-  vorticity: 0
-  viscosity: 0
-  soupImpactScore: 0
+  ingredientName: Paper
+  size: 0.09
+  calories: 0.09
+  minerals: 0.1
+  vitamins: 0.04
+  saltiness: 0.05
+  bitterness: 1
+  acidicPhLevel: 0.06
+  sourSweetLevel: -1
+  freedomForDefects: 0.02
+  viscosity: 0.02

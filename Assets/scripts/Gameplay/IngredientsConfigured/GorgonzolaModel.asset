@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
   m_Name: GorgonzolaModel
   m_EditorClassIdentifier: 
-  name: Gorgonzola
-  vorticity: 0
-  viscosity: 0
-  soupImpactScore: 0
+  ingredientName: GorgonzolaCheese
+  size: 0.22
+  calories: 0.78
+  minerals: 0.71
+  vitamins: 0.23
+  saltiness: 0.66
+  bitterness: 0.67
+  acidicPhLevel: 0.61
+  sourSweetLevel: -0.34
+  freedomForDefects: 0.9
+  viscosity: 0.35

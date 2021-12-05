@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
   m_Name: CarrotModel
   m_EditorClassIdentifier: 
-  name: Carrot
-  vorticity: 0
-  viscosity: 0
-  soupImpactScore: 0
+  ingredientName: Carrot
+  size: 0.41
+  calories: 0.29
+  minerals: 0.4
+  vitamins: 0.84
+  saltiness: 0.13
+  bitterness: 0.2
+  acidicPhLevel: 0.3
+  sourSweetLevel: 0.27
+  freedomForDefects: 0.67
+  viscosity: 0.34

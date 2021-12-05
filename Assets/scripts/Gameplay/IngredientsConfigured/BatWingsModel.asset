@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
   m_Name: BatWingsModel
   m_EditorClassIdentifier: 
-  name: BatWings
-  vorticity: 0
-  viscosity: 0
-  soupImpactScore: 0
+  ingredientName: BatWings
+  size: -10
+  calories: 0.3
+  minerals: 0.55
+  vitamins: 0.24
+  saltiness: 0.78
+  bitterness: 0.8
+  acidicPhLevel: 0.94
+  sourSweetLevel: -0.27
+  freedomForDefects: 0.24
+  viscosity: 0.13

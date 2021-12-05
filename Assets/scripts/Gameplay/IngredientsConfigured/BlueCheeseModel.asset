@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
   m_Name: BlueCheeseModel
   m_EditorClassIdentifier: 
-  name: BlueCheese
-  vorticity: 0
-  viscosity: 0
-  soupImpactScore: 0
+  ingredientName: BlueCheese
+  size: 0.71
+  calories: 0.7
+  minerals: 0.26
+  vitamins: 0.26
+  saltiness: 0.77
+  bitterness: 0.26
+  acidicPhLevel: 0.5
+  sourSweetLevel: -0.15
+  freedomForDefects: 0.82
+  viscosity: 0.24

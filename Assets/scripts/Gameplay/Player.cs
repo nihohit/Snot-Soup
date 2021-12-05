@@ -64,7 +64,13 @@ public class Player : MonoBehaviour {
     setIngredientDescription();
   }
 
+    public void OnCook()
+    {
+        _cauldron.Cook();
+    }
+
   public void SetCauldron(Cauldron drop) {
     _cauldron = drop;
   }
+
 }

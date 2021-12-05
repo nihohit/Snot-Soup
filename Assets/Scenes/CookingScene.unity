@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -404,6 +404,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1291055985}
+  - component: {fileID: 1291055987}
+  - component: {fileID: 1291055986}
   m_Layer: 0
   m_Name: Ingredients
   m_TagString: Untagged
@@ -426,6 +428,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291055986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291055984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392683105ff894353be70cfcdb30f16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledPrefabs:
+  - {fileID: 4099827415725316070, guid: c2724ded0cd924a13874539195549692, type: 3}
+  - {fileID: 3626413287322869646, guid: b403799a0272a4b9ab33ab4f50dadd31, type: 3}
+  - {fileID: 2572121073645842994, guid: 0d231b60f4b2f4e6e8ee812ba7be8fa5, type: 3}
+  - {fileID: 1218030157294727710, guid: fad3afe317a3c4592a6819fe126f6bde, type: 3}
+  - {fileID: 1085723865206283694, guid: ad6f7689e0349483b9f1e24b27866205, type: 3}
+  - {fileID: 9117178484408516718, guid: 535708e9075354ea6b61e01af365e810, type: 3}
+  - {fileID: 4973625185496852700, guid: c15fce6ecba0042dc97fccc52083e16e, type: 3}
+  - {fileID: 4979168398517805273, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+  - {fileID: 177108149820613867, guid: de0c93ff1d2d14152b81db332c41aa24, type: 3}
+  - {fileID: 5242676504263886374, guid: 9450d710ff06342ada1f681a94ef9152, type: 3}
+  - {fileID: 1561509390556446375, guid: 342a911710f6049d9ae1b731aa66d163, type: 3}
+  - {fileID: 8707563134432595699, guid: d3813615d2a634919bc0da34bf21af86, type: 3}
+  - {fileID: 787037201321788842, guid: 33c95a13c1b204e1f81f093311a35e68, type: 3}
+--- !u!114 &1291055987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291055984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc08c5c85a5446ad87d0a23d88c7900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 1291055986}
 --- !u!1001 &1903642119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -620,6 +661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cauldron
       objectReference: {fileID: 0}
+    - target: {fileID: 1172989342309888833, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+      propertyPath: _boss
+      value: 
+      objectReference: {fileID: 2076421109}
     - target: {fileID: 4991290299788868944, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
       propertyPath: m_Name
       value: Arena

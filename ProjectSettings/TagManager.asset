@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Ingredient
+  - Cauldron
   layers:
   - Default
   - TransparentFX

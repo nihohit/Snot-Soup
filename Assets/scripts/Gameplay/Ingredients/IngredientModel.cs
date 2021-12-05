@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Linq;
 
 namespace SnotSoup.Gameplay.Ingredients {
   /// <summary>
@@ -102,9 +103,13 @@ namespace SnotSoup.Gameplay.Ingredients {
 
     public string Description {
       get {
-        var sizeDescription = size > 0.5 ? "Large" : "small";
+        var splitName = string.Join("", Name.Select(letter => char.IsUpper(letter) ? " " + letter : "" + letter));
+        if (splitName[0] == ' ') {
+          splitName.Remove(0, 1);
+        }
+        var sizeDescription = size > 0.5 ? "large" : "small";
         var hardness = minerals + vitamins < size || viscosity > 0.3 ? "hard" : "soft";
-        return $"{sizeDescription} {hardness} {Name}";
+        return $"{sizeDescription} {hardness} {splitName}".Replace("  ", " ");
       }
     }
 

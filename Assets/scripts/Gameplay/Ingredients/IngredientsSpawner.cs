@@ -7,17 +7,17 @@ namespace SnotSoup.Gameplay.Ingredients {
         [SerializeField] private SimpleObjectPool pool;
 
         public static Action<Vector3> OnRespawnIngredient;
-        public static Action<GameObject> OnReturnIngredient;
+        public static Action<GameObject> OnReturnIngredientToPool;
         
         //TODO implement even bus
         protected void Awake() {
             OnRespawnIngredient += ReSpawnRandomIngredientAtPosition;
-            OnReturnIngredient += ReturnIngredientToPool;
+            OnReturnIngredientToPool += ReturnIngredientToPool;
         }
 
         protected void OnDestroy() {
             OnRespawnIngredient -= ReSpawnRandomIngredientAtPosition;
-            OnReturnIngredient -= ReturnIngredientToPool;
+            OnReturnIngredientToPool -= ReturnIngredientToPool;
         }
   
         private void ReSpawnRandomIngredientAtPosition(Vector3 spawnPosition) {

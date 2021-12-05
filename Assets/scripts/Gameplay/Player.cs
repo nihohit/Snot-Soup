@@ -25,7 +25,9 @@ public class Player : MonoBehaviour {
       return;
     }
     _smallPromptBox.SetActive(true);
-    _descriptionText.text = (_target == null ? _pickedItem : _target).
+    var foodDescription = (_pickedItem != null ? _pickedItem : _target).GetDescription();
+    var actionDescription = _pickedItem == null ? "Pick up" : _cauldron == null ? "Drop" : "Cook";
+    _descriptionText.text = $"{actionDescription} {foodDescription}";
   }
 
   public void SetPickupTarget(IngredientPicker target) {
@@ -70,6 +72,7 @@ public class Player : MonoBehaviour {
 
   public void SetCauldron(Cauldron drop) {
     _cauldron = drop;
+    setIngredientDescription();
   }
 
 }

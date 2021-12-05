@@ -103,8 +103,8 @@ namespace SnotSoup.Gameplay.Ingredients {
     public string Description {
       get {
         var sizeDescription = size > 0.5 ? "Large" : "small";
-        var feelingDescription = viscosity > 0.5 ? "Viscuous" : "Flat";
-        return $"{sizeDescription} {feelingDescription} {name}";
+        var hardness = minerals + vitamins < size || viscosity > 0.3 ? "hard" : "soft";
+        return $"{sizeDescription} {hardness} {Name}";
       }
     }
 

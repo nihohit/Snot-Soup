@@ -53,12 +53,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4979168398517805273, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Name
-      value: Paper
+      value: Shrimp
       objectReference: {fileID: 0}
     - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: model
       value: 
       objectReference: {fileID: 11400000, guid: dd0802fb265eb432c8cd7b6b9c30f6a8, type: 2}
+    - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+      propertyPath: miniIngredientView
+      value: 
+      objectReference: {fileID: 1000012389451028, guid: 83eaee396f0b840c29b3c81ed57cc94d, type: 3}
     - target: {fileID: 8653321594744481807, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

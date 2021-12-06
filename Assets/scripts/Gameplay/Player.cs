@@ -83,12 +83,6 @@ public class Player : MonoBehaviour {
     setIngredientDescription();
   }
 
-  public void OnMove() {
-    if (_pickedItem != null) {
-        animator.SetBool(_runAnimationHash, true);
-    }
-  }
-
   public void OnCook() {
     _cauldron.Cook();
   }

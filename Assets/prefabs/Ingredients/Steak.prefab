@@ -53,11 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4979168398517805273, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Name
-      value: Salt
+      value: Steak
       objectReference: {fileID: 0}
     - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: model
       value: 
       objectReference: {fileID: 11400000, guid: 3231df031dba44f538f7e9f5c06655ea, type: 2}
+    - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+      propertyPath: miniIngredientView
+      value: 
+      objectReference: {fileID: 1000011546679732, guid: dcaa5768fac414bccbd7bdf2f824557a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}

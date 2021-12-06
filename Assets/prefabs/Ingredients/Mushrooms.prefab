@@ -53,12 +53,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4979168398517805273, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Name
-      value: Broccoli
+      value: Mushrooms
       objectReference: {fileID: 0}
     - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: model
       value: 
       objectReference: {fileID: 11400000, guid: b241da76ae7854e3fbb4036425862ccb, type: 2}
+    - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+      propertyPath: miniIngredientView
+      value: 
+      objectReference: {fileID: 1834503257163952, guid: 85c78b9efd5c144b98eb9ef3c6236606, type: 3}
     - target: {fileID: 8653321594744481807, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

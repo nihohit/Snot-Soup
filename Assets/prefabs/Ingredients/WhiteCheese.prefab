@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: model
       value: 
       objectReference: {fileID: 11400000, guid: 8bbbfc4335b99460da38a5e06ced346e, type: 2}
+    - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+      propertyPath: miniIngredientView
+      value: 
+      objectReference: {fileID: 1000011653470102, guid: c28ceba8305e644868517119acc07e1f, type: 3}
     - target: {fileID: 8653321594744481807, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

@@ -53,12 +53,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4979168398517805273, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Name
-      value: Gorgonzola
+      value: Chicken
       objectReference: {fileID: 0}
     - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: model
       value: 
       objectReference: {fileID: 11400000, guid: 2d31522f8bd6b4386a1be75cd799a3d0, type: 2}
+    - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+      propertyPath: miniIngredientView
+      value: 
+      objectReference: {fileID: 1282152240242332, guid: aaf04d912d42c4f76ba671b418e4c3cf, type: 3}
     - target: {fileID: 8653321594744481807, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

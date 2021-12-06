@@ -3,7 +3,9 @@ using UnityEngine;
 namespace SnotSoup.Gameplay.Ingredients {
   public class IngredientView : MonoBehaviour {
     [SerializeField] private IngredientModel model;
-
+    [SerializeField] private GameObject miniIngredientView;
+    [SerializeField] private float bounceScale = 0.5f;
+  
     public string Name { get { return model.Name; } }
     public string Description { get { return model.Description; } }
 
@@ -25,7 +27,6 @@ namespace SnotSoup.Gameplay.Ingredients {
     }
 
     protected void Awake() {
-      _spawnPosition = transform.localPosition;
       if (!string.IsNullOrWhiteSpace(model.ResourceName)) {
         transform.Find("Graphic").gameObject.SetActive(false);
         var resource = Resources.Load<GameObject>(model.ResourceName);
@@ -33,12 +34,15 @@ namespace SnotSoup.Gameplay.Ingredients {
         instance.transform.position = transform.position;
         instance.transform.parent = transform;
       }
+
     }
 
     protected void OnCollisionEnter(Collision collision) {
       if (collision.gameObject.CompareTag("Cauldron")) {
         var c = collision.gameObject.GetComponent<Cauldron>();
         c.Add(model);
+        var miniIngredient = Instantiate(miniIngredientView);
+        miniIngredient.transform.position = transform.position;
         IngredientsSpawner.OnRespawnIngredient(_spawnPosition);
         IngredientsSpawner.OnReturnIngredientToPool(gameObject);
       }

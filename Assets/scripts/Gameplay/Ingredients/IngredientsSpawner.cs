@@ -26,6 +26,7 @@ namespace SnotSoup.Gameplay.Ingredients {
             for (int i = 0; i < spawnPoints.Length; i++) {
                 var ingredient = pool.GetObject(i);
                 ingredient.transform.position = spawnPoints[i].position;
+                ingredient.GetComponent<IngredientView>().SpawnPosition = spawnPoints[i].position;
             }
         }
   

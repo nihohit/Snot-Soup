@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4754352354317974}
   - component: {fileID: 95389216321950830}
   m_Layer: 0
-  m_Name: Skinned_Chicken
+  m_Name: Chicken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

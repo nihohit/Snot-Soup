@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
-  m_Name: SaltModel
+  m_Name: SteakModel
   m_EditorClassIdentifier: 
-  ingredientName: Salt
+  ingredientName: Steak
   size: 0.02
   calories: 0.02
   minerals: 0.05
@@ -23,3 +23,4 @@ MonoBehaviour:
   sourSweetLevel: -1
   freedomForDefects: 0.05
   viscosity: 0.06
+  resourceName: Steak

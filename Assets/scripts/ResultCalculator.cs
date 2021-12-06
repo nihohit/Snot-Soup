@@ -74,14 +74,15 @@ namespace SnotSoup {
       var normalizedSaltiness = saltiness / ingredients.Count > 0.8f || saltiness / ingredients.Count < 0.2f
         ? -1f
         : saltiness / ingredients.Count;
+      var variety = 0.015f * ingredients.Count;
 
       var computedYumminess = (normalizedVitamins * 0.05f) +
                           (normalizedMinerals * 0.05f) +
                           (normalizedSize * 0.1f) +
                           (normalizedAcidicValue * 0.2f) +
-                          (normalizedBitterness * 0.2f * -1f) +
+                          (normalizedBitterness * 0.2f) +
                           (normalizedSourSweetLevel * 0.2f) +
-                          (normalizedSaltiness * 0.2f);
+                          (normalizedSaltiness * 0.2f) + variety;
 
       return computedYumminess;
     }

@@ -736,6 +736,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4040695285526608161, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.3741982
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040695285526608161, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12673648
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040695285526608161, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.6535957
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040695285526608161, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.084012166
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040695285526608161, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9964648
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040695285526608161, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 186.993
+      objectReference: {fileID: 0}
     - target: {fileID: 4991290299788868944, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
       propertyPath: m_Name
       value: Arena

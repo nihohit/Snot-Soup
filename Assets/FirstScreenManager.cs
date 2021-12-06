@@ -7,4 +7,9 @@ public class FirstScreenManager : MonoBehaviour {
   public void LoadNewScene() {
     SceneManager.LoadScene("CookingScene");
   }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("IntroScene");
+    }
 }

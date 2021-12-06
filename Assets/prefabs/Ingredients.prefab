@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: {fileID: 1775666071590908579}
+  dropIngredientSource: {fileID: 0}
   spawnPoints:
   - {fileID: 808620621431161795}
   - {fileID: 7356849701197267311}

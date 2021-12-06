@@ -2,12 +2,12 @@ using UnityEngine;
 
 namespace SnotSoup.Gameplay.Ingredients {
     public class BounceGameObject : MonoBehaviour {
-        [SerializeField] private float speed = 0.5f;
+        [SerializeField] private float speed = 4f;
 
-        private bool isBouncing;
+        private bool _isBouncing;
 
         protected void OnEnable() {
-            isBouncing = true;
+            _isBouncing = true;
         }
 
         protected void OnDestroy() {
@@ -15,8 +15,8 @@ namespace SnotSoup.Gameplay.Ingredients {
         }
         
         protected void Update() {
-            if (!isBouncing) return;
-            var bounce = 0.2f * Mathf.Sin(Time.time) * 0.5f + 1.4f;
+            if (!_isBouncing) return;
+            var bounce = 0.2f * Mathf.Sin(Time.time * speed) * 0.5f + 1.2f;
             transform.position = new Vector3(transform.position.x, bounce, transform.position.z);
         }
     }

@@ -4,7 +4,6 @@ namespace SnotSoup.Gameplay.Ingredients {
   public class IngredientView : MonoBehaviour {
     [SerializeField] private IngredientModel model;
     [SerializeField] private GameObject miniIngredientView;
-    [SerializeField] private float bounceScale = 0.5f;
   
     public string Name { get { return model.Name; } }
     public string Description { get { return model.Description; } }

@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
-  m_Name: HumanFingersModel
+  m_Name: YellowCheeseModel
   m_EditorClassIdentifier: 
-  ingredientName: HumanFingers
-  size: 0.26
-  calories: 0.34
-  minerals: 0.62
-  vitamins: 0.56
-  saltiness: 0.5
-  bitterness: 0.52
-  acidicPhLevel: 0.67
-  sourSweetLevel: -0.41
-  freedomForDefects: 0.71
-  viscosity: 0.38
+  ingredientName: Cheese
+  size: 0.71
+  calories: 0.7
+  minerals: 0.26
+  vitamins: 0.26
+  saltiness: 0.77
+  bitterness: 0.26
+  acidicPhLevel: 0.5
+  sourSweetLevel: -0.15
+  freedomForDefects: 0.82
+  viscosity: 0.24
+  resourceName: Cheese

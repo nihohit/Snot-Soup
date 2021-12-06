@@ -13,7 +13,32 @@ namespace CzernyStudio.Utilities {
 
 		private Stack<GameObject> _inactiveInstances = new Stack<GameObject>();
 
-		public GameObject GetObject() 
+		public GameObject GetObject(int index) {
+			GameObject spawnedGameObject;
+
+			// if there is an inactive instance of the prefab ready to return, return that
+			if (_inactiveInstances.Count > 0) 
+			{
+				// remove the instance from teh collection of inactive instances
+				spawnedGameObject = _inactiveInstances.Pop();
+			}
+			// otherwise, create a new instance
+			else {
+				spawnedGameObject = Instantiate(pooledPrefabs[index]);
+
+				var pooledObject = spawnedGameObject.GetComponent<PooledObject>();
+				pooledObject.pool = this;
+			}
+
+			// put the instance in the root of this script
+			spawnedGameObject.transform.SetParent(transform, false);
+			spawnedGameObject.SetActive(true);
+
+			// return a reference to the instance
+			return spawnedGameObject;
+		}
+		
+		public GameObject GetRandomObject() 
 		{
 			GameObject spawnedGameObject;
 

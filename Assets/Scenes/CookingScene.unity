@@ -1215,10 +1215,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 895933937492680947, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
-      propertyPath: m_Name
-      value: Salami
-      objectReference: {fileID: 0}
     - target: {fileID: 1708743746237410184, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1266,26 +1262,6 @@ PrefabInstance:
     - target: {fileID: 1708743746237410185, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
       propertyPath: m_Name
       value: Ingredients
-      objectReference: {fileID: 0}
-    - target: {fileID: 2885562892827505044, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
-      propertyPath: m_Name
-      value: Steak
-      objectReference: {fileID: 0}
-    - target: {fileID: 4294979023871911204, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
-      propertyPath: m_Name
-      value: Chicken
-      objectReference: {fileID: 0}
-    - target: {fileID: 5198208895178226839, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
-      propertyPath: m_Name
-      value: Shrimp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068904054154869754, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
-      propertyPath: m_Name
-      value: YellowCheese
-      objectReference: {fileID: 0}
-    - target: {fileID: 9190594723558942759, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
-      propertyPath: m_Name
-      value: Mushrooms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d127b513acfab4d4ea53bab59759b754, type: 3}

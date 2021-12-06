@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using SnotSoup.Gameplay.Ingredients;
+using UnityEngine;
 
 namespace SnotSoup {
 
@@ -32,7 +33,7 @@ namespace SnotSoup {
       }
 
       //2. normalize the values
-      var normalizedAcidity = acidity / size;
+      var normalizedAcidity = Mathf.Abs(acidity) / size;
       var normalizedFOD = freedomOfDefect / size;
 
       //3. give weight to values

@@ -13,7 +13,7 @@ namespace SnotSoup {
     private Mood lastMood = Mood.Happy;
     private bool slideranimationInProgress = false;
 
-        private Animator _anim;
+        [SerializeField] Animator _anim;
 
     private void Start() {
       var slider = GameObject.Find("HealthSlider");
@@ -21,7 +21,6 @@ namespace SnotSoup {
       slider = GameObject.Find("HangerSlider");
       hangerSlider = GameObject.Find("HangerSlider").GetComponent<Slider>();
       Boss.Reset();
-            _anim = GetComponent<Animator>();
     }
 
     private void Update() {

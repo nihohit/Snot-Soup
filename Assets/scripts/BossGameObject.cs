@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace SnotSoup {
 
-  public enum FeedingResponse { Ate, Refused };
+  public enum FeedingResponse { AteWell, AteFeelingBad, Refused };
 
   public class BossGameObject : MonoBehaviour {
     private Slider healthSlider;
@@ -40,7 +40,7 @@ namespace SnotSoup {
         return FeedingResponse.Refused;
       }
       Boss.Feed(soup);
-      return FeedingResponse.Ate;
+      return soup.filling > soup.toxicity ? FeedingResponse.AteWell : FeedingResponse.AteFeelingBad;
     }
   }
 }

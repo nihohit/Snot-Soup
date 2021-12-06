@@ -17,8 +17,10 @@ namespace SnotSoup {
     }
 
     public static void Feed(FinishedSoup soup) {
-      Health -= soup.toxicity;
-      Hangriness += soup.yumminess;
+      Health -= soup.toxicity * MAX_HEALTH;
+      Health = Mathf.Max(Health, 0);
+      Hangriness -= soup.filling * MAX_HANGER;
+      Hangriness = Mathf.Max(Hangriness, 0);
     }
 
     public static Mood getMood() {
@@ -41,7 +43,7 @@ namespace SnotSoup {
     }
 
     public static bool willingToEat(FinishedSoup soup) {
-      return soup.looks > 20;
+      return soup.yumminess > 0.2;
     }
   }
 

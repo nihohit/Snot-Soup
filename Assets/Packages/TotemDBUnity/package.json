@@ -1,0 +1,18 @@
+{
+  "name": "com.totem.totemdb",
+  "version": "1.0.1",
+  "displayName": "TotemDB Wrapper for Unity",
+  "description": "A simple TotemDB Wrapper for Unity!",
+  "unity": "2017.1",
+  "dependencies": {
+ },
+ "keywords": [
+    "Totem",
+    "TotemDB"
+  ],
+  "author": {
+    "name": "Snir Sharristh",
+    "email": "snir@hey.com",
+    "url": "https://github.com/Totem-gdn/TotemDBUnity"
+  }
+}

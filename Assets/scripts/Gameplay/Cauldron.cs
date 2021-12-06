@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Cauldron : MonoBehaviour {
   [SerializeField] Transform _ingredientDrop;
@@ -40,29 +41,39 @@ public class Cauldron : MonoBehaviour {
     _ingredients.Add(ingredient);
   }
 
-  private IEnumerator RotateText(Transform toRotate) {
-    toRotate.Rotate(Vector3.forward, -20);
-    for (var i = 0; i < 4; ++i) {
+  private IEnumerator RotateText(string textToDisplay) {
+    _smallPromptBox.SetActive(true);
+    _descriptionText.text = textToDisplay;
+    return Rotate(_smallPromptBox.transform, 3, 2, Vector3.forward, 80, () => {
+      _smallPromptBox.SetActive(false);
+    });
+  }
+
+  private IEnumerator Rotate(Transform toRotate, int repetitions, float duration, Vector3 rotationAxis, float maxRotation,
+  Action completion) {
+    var twoDirectionRepetitions = repetitions * 2;
+    var repetitionDuration = duration / twoDirectionRepetitions;
+    toRotate.Rotate(rotationAxis, -maxRotation / twoDirectionRepetitions);
+    for (var i = 0; i < twoDirectionRepetitions; ++i) {
       var initialTime = System.DateTime.Now;
-      while ((System.DateTime.Now - initialTime).TotalSeconds < 0.5) {
+      while ((System.DateTime.Now - initialTime).TotalSeconds < repetitionDuration) {
         var direction = i % 2 == 0 ? 1 : -1;
         yield return null;
-        toRotate.Rotate(Vector3.forward, Time.deltaTime * 80 * direction);
+        toRotate.Rotate(rotationAxis, Time.deltaTime * maxRotation * direction);
       }
     }
     toRotate.rotation = Quaternion.identity;
-    toRotate.gameObject.SetActive(false);
+    completion();
   }
 
   public void Cook() {
     if (_ingredients.Count == 0) {
+      StartCoroutine(RotateText("That's just water!\nMAKE ME SOUP!"));
       return;
     }
     var soup = SnotSoup.ResultCalculator.getSoupResult(new SnotSoup.CookingInputs(_ingredients));
     var response = _boss.TryFeed(soup);
-    _smallPromptBox.SetActive(true);
-    _descriptionText.text = _responses[response];
+    StartCoroutine(RotateText(_responses[response]));
     _ingredients.Clear();
-    StartCoroutine(RotateText(_smallPromptBox.transform));
   }
 }

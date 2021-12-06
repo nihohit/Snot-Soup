@@ -12,6 +12,11 @@ namespace SnotSoup {
     public static float Health { get; private set; } = 100f; // 0..100
     public static float Hangriness { get; private set; } = 0f; // 0..150
 
+    public static void Reset() {
+      Health = MAX_HEALTH;
+      Hangriness = 0f;
+    }
+
     public static void Tick() {
       Hangriness += Time.deltaTime;
     }

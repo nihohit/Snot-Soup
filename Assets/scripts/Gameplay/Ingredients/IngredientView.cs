@@ -4,6 +4,7 @@ namespace SnotSoup.Gameplay.Ingredients {
   public class IngredientView : MonoBehaviour {
     [SerializeField] private IngredientModel model;
     [SerializeField] private GameObject miniIngredientView;
+        [SerializeField] private IngredientPicker _picker;
   
     public string Name { get { return model.Name; } }
     public string Description { get { return model.Description; } }
@@ -40,6 +41,7 @@ namespace SnotSoup.Gameplay.Ingredients {
       if (collision.gameObject.CompareTag("Cauldron")) {
         var c = collision.gameObject.GetComponent<Cauldron>();
         c.Add(model);
+        _picker.enabled = true;
         var miniIngredient = Instantiate(miniIngredientView);
         miniIngredient.transform.position = transform.position;
         IngredientsSpawner.OnRespawnIngredient(_spawnPosition);

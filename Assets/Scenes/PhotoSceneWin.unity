@@ -1869,6 +1869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4bb77cbb95f41589c987307efc29e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _anim: {fileID: 0}
 --- !u!4 &2076421110
 Transform:
   m_ObjectHideFlags: 0
@@ -2291,6 +2292,10 @@ PrefabInstance:
       propertyPath: _boss
       value: 
       objectReference: {fileID: 2076421109}
+    - target: {fileID: 3699916382169260955, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4991290299788868944, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
       propertyPath: m_Name
       value: Arena

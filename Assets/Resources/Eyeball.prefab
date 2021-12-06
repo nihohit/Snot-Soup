@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 397163906835146320}
   - component: {fileID: 3615504214254217717}
   - component: {fileID: 1569555755212479807}
+  - component: {fileID: 8628931857438142471}
   m_Layer: 0
   m_Name: Eyeball
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8628931857438142471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065333122166668522}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.399999, y: 8.399999, z: 10.715743}
+  m_Center: {x: 0, y: 0, z: -2.0947366}

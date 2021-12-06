@@ -47,6 +47,7 @@ namespace SnotSoup.Gameplay.Ingredients {
         _picker.enabled = true;
         var miniIngredient = Instantiate(miniIngredientView);
         miniIngredient.transform.position = transform.position;
+        IngredientsSpawner.OnSpawnMiniIngredient(miniIngredient);
         IngredientsSpawner.OnRespawnIngredient(_spawnPosition);
         IngredientsSpawner.OnReturnIngredientToPool(gameObject);
       }

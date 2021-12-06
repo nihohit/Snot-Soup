@@ -12,5 +12,4 @@ public interface IIngredientModel {
     float SourSweetLevel { get; }
     float FreedomForDefects { get; }
     float Viscosity { get; }
-    float SoupImpactScore { get; }
 }

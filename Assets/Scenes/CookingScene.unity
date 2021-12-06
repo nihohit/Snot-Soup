@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4436118, g: 0.4929343, b: 0.57250285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44361192, g: 0.49293417, b: 0.5725031, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -932,6 +932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredients
       objectReference: {fileID: 0}
+    - target: {fileID: 6204549865405658529, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
+      propertyPath: dropIngredientSource
+      value: 
+      objectReference: {fileID: 4991290300582425341}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d127b513acfab4d4ea53bab59759b754, type: 3}
 --- !u!1001 &4991290300582425340
@@ -941,10 +945,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 361540073808543814, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
-      propertyPath: m_Name
-      value: Cauldron
-      objectReference: {fileID: 0}
     - target: {fileID: 1172989342309888833, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
       propertyPath: _boss
       value: 
@@ -999,6 +999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+--- !u!82 &4991290300582425341 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7922898041749529760, guid: 91cb43bc442321749bd0b1e499bad668, type: 3}
+  m_PrefabInstance: {fileID: 4991290300582425340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5456083710110899409
 PrefabInstance:
   m_ObjectHideFlags: 0

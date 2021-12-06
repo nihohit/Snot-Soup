@@ -1250,6 +1250,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ingredientParent: {fileID: 0}
+  animator: {fileID: 791669867}
+  pickupAnimationTriggerName: Pickup
+  placeAnimationTriggerName: Place
+  _escMenu: {fileID: 0}
 --- !u!114 &1765335692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,6 +1267,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 791669867}
+  pickupAnimationTriggerName: Pickup
+  placeAnimationTriggerName: Place
+  cookAnimationTriggerName: Cook
 --- !u!1 &4884535256469537694
 GameObject:
   m_ObjectHideFlags: 0

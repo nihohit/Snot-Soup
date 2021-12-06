@@ -507,7 +507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'By virtue of wits and cooking, when you really can''t, you have beaten
+  m_text: 'By virtue of wits and cooking while barely breathing, you have beaten
     The Eternally Hungry Grokzord.
 
 
@@ -684,6 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a29f52bec66b4702abdc5c69ab955c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Logo: {fileID: 0}
 --- !u!1 &985198464
 GameObject:
   m_ObjectHideFlags: 0

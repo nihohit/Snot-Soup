@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using SnotSoup.Gameplay.Ingredients;
+using Unity.VisualScripting;
 
 public class Cauldron : MonoBehaviour {
   [SerializeField] Transform _ingredientDrop;
@@ -100,6 +102,7 @@ public class Cauldron : MonoBehaviour {
     var response = _boss.TryFeed(soup);
     var responseList = _responses[response];
     StartCoroutine(RotateText(responseList[_random.Next(responseList.Length)]));
+    IngredientsSpawner.ClearMiniIngredientList.Invoke();
     _ingredients.Clear();
   }
 }

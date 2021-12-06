@@ -97,10 +97,6 @@ namespace SnotSoup.Gameplay.Ingredients {
       }
     }
 
-    public float SoupImpactScore {
-      get { return size; }
-    }
-
     public string Description {
       get {
         var splitName = string.Join("", Name.Select(letter => char.IsUpper(letter) ? " " + letter : "" + letter));

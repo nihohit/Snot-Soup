@@ -1,5 +1,6 @@
 using CzernyStudio.Utilities;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SnotSoup.Gameplay.Ingredients {
@@ -10,11 +11,16 @@ namespace SnotSoup.Gameplay.Ingredients {
 
         public static Action<Vector3> OnRespawnIngredient;
         public static Action<GameObject> OnReturnIngredientToPool;
+        public static Action<GameObject> OnSpawnMiniIngredient;
+        public static Action ClearMiniIngredientList;
 
+        private List<GameObject> _miniIngredientsPerCooking = new List<GameObject>();
         
         protected void Awake() {
             OnRespawnIngredient += ReSpawnRandomIngredientAtPosition;
             OnReturnIngredientToPool += ReturnIngredientToPool;
+            OnSpawnMiniIngredient += AddMiniIngredientsToList;
+            ClearMiniIngredientList += ClearMiniIngredients;
             
             SpawnIngredientsOnGameStart();
         }
@@ -22,6 +28,8 @@ namespace SnotSoup.Gameplay.Ingredients {
         protected void OnDestroy() {
             OnRespawnIngredient -= ReSpawnRandomIngredientAtPosition;
             OnReturnIngredientToPool -= ReturnIngredientToPool;
+            OnSpawnMiniIngredient -= AddMiniIngredientsToList;
+            ClearMiniIngredientList -= ClearMiniIngredients;
         }
 
         private void SpawnIngredientsOnGameStart() {
@@ -43,6 +51,16 @@ namespace SnotSoup.Gameplay.Ingredients {
 
         private void ReturnIngredientToPool(GameObject ingredientObject) {
             pool.ReturnObject(ingredientObject);
+        }
+
+        private void AddMiniIngredientsToList(GameObject ingredient) {
+            _miniIngredientsPerCooking.Add(ingredient);
+        }
+
+        private void ClearMiniIngredients() {
+            for (int i = 0; i < _miniIngredientsPerCooking.Count; i++) {
+                Destroy(_miniIngredientsPerCooking[i]);
+            }
         }
     }
 }

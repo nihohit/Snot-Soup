@@ -18,7 +18,7 @@ public class Cauldron : MonoBehaviour {
 
   private List<SnotSoup.Gameplay.Ingredients.IngredientModel> _ingredients = new List<SnotSoup.Gameplay.Ingredients.IngredientModel>();
 
-  private void Start() {
+  private void Awake() {
     _smallPromptBox = GameObject.Find("SmallPromptBox");
     _descriptionText = _smallPromptBox.transform.Find("Text").GetComponent<TMP_Text>();
   }

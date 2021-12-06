@@ -60,9 +60,6 @@ namespace SnotSoup {
     }
 
     public FeedingResponse TryFeed(FinishedSoup soup) {
-      if (!Boss.willingToEat(soup)) {
-        return FeedingResponse.Refused;
-      }
       var hangriness = Boss.Hangriness;
       var health = Boss.Health;
       Boss.Feed(soup);

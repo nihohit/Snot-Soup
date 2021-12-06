@@ -58,6 +58,8 @@ namespace StarterAssets
 		public float CameraAngleOverride = 0.0f;
 		[Tooltip("For locking the camera position on all axis")]
 		public bool LockCameraPosition = false;
+		[SerializeField] Animator _animator;
+
 
 		// cinemachine
 		private float _cinemachineTargetYaw;
@@ -82,7 +84,6 @@ namespace StarterAssets
 		private int _animIDFreeFall;
 		private int _animIDMotionSpeed;
 
-		private Animator _animator;
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
 		private GameObject _mainCamera;
@@ -102,7 +103,6 @@ namespace StarterAssets
 
 		private void Start()
 		{
-			_hasAnimator = TryGetComponent(out _animator);
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 
@@ -115,8 +115,6 @@ namespace StarterAssets
 
 		private void Update()
 		{
-			_hasAnimator = TryGetComponent(out _animator);
-			
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
@@ -142,11 +140,7 @@ namespace StarterAssets
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
 
-			// update animator if using character
-			if (_hasAnimator)
-			{
-				_animator.SetBool(_animIDGrounded, Grounded);
-			}
+			_animator.SetBool(_animIDGrounded, Grounded);
 		}
 
 		private void CameraRotation()
@@ -219,12 +213,8 @@ namespace StarterAssets
 			// move the player
 			_controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
-			// update animator if using character
-			if (_hasAnimator)
-			{
-				_animator.SetFloat(_animIDSpeed, _animationBlend);
-				_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
-			}
+			_animator.SetFloat(_animIDSpeed, _animationBlend);
+			_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
 		}
 
 		private void JumpAndGravity()
@@ -234,12 +224,8 @@ namespace StarterAssets
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
 
-				// update animator if using character
-				if (_hasAnimator)
-				{
-					_animator.SetBool(_animIDJump, false);
-					_animator.SetBool(_animIDFreeFall, false);
-				}
+				_animator.SetBool(_animIDJump, false);
+				_animator.SetBool(_animIDFreeFall, false);
 
 				// stop our velocity dropping infinitely when grounded
 				if (_verticalVelocity < 0.0f)
@@ -253,11 +239,7 @@ namespace StarterAssets
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 
-					// update animator if using character
-					if (_hasAnimator)
-					{
-						_animator.SetBool(_animIDJump, true);
-					}
+					_animator.SetBool(_animIDJump, true);
 				}
 
 				// jump timeout
@@ -278,11 +260,7 @@ namespace StarterAssets
 				}
 				else
 				{
-					// update animator if using character
-					if (_hasAnimator)
-					{
-						_animator.SetBool(_animIDFreeFall, true);
-					}
+					_animator.SetBool(_animIDFreeFall, true);
 				}
 
 				// if we are not grounded, do not jump

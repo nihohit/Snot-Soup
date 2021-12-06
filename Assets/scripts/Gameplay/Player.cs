@@ -1,10 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
 public class Player : MonoBehaviour {
   [SerializeField] Transform _ingredientParent;
+  [SerializeField] private Animator animator;
+  
+  [SerializeField] private string pickupAnimationTriggerName = "Pickup";
+  [SerializeField] private string placeAnimationTriggerName = "Place";
 
   private IngredientPicker _target;
   private IngredientPicker _pickedItem;
@@ -12,6 +15,13 @@ public class Player : MonoBehaviour {
 
   private GameObject _smallPromptBox;
   private TMP_Text _descriptionText;
+  private int _pickupAnimationHash;
+  private int _placeAnimationHash;
+
+  protected void Awake() {
+      _pickupAnimationHash = Animator.StringToHash(pickupAnimationTriggerName);
+      _placeAnimationHash = Animator.StringToHash(placeAnimationTriggerName);
+  }
 
   private void Start() {
     _smallPromptBox = GameObject.Find("SmallPromptBox");
@@ -52,11 +62,13 @@ public class Player : MonoBehaviour {
 
   public void OnInteract() {
     if (canPick()) {
+      animator.SetTrigger(_pickupAnimationHash);
       _pickedItem = _target;
       _target = null;
       _pickedItem.BindToTarget(_ingredientParent);
     } else if (_pickedItem != null) {
       _pickedItem.Unbind();
+      animator.SetTrigger(_placeAnimationHash);
       if (_cauldron != null) {
         _pickedItem.SetPosition(_cauldron.IngredientDrop);
         _pickedItem.enabled = false;
@@ -74,5 +86,4 @@ public class Player : MonoBehaviour {
     _cauldron = drop;
     setIngredientDescription();
   }
-
 }

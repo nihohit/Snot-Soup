@@ -16,6 +16,7 @@ namespace SnotSoup {
       healthSlider = slider.GetComponent<Slider>();
       slider = GameObject.Find("HangerSlider");
       hangerSlider = GameObject.Find("HangerSlider").GetComponent<Slider>();
+      Boss.Reset();
     }
 
     private void Update() {

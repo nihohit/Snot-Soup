@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+
 namespace SnotSoup {
 
   public enum FeedingResponse { AteWell, AteFeelingBad, Refused };
@@ -17,6 +19,9 @@ namespace SnotSoup {
         private Quaternion _initialRot;
 
         [SerializeField] Animator _anim;
+        [SerializeField] AudioSource _audioSource;
+        [SerializeField] List<AudioClip> _slurpsClips;
+        [SerializeField] AudioClip _deathClip;
 
     private void Start() {
       var slider = GameObject.Find("HealthSlider");
@@ -62,6 +67,7 @@ namespace SnotSoup {
       }
       if (Boss.Health <= 0) {
                 _anim.SetBool("Dead", true);
+                _audioSource.PlayOneShot(_deathClip);
       }
       slideranimationInProgress = false;
     }
@@ -71,6 +77,8 @@ namespace SnotSoup {
       var health = Boss.Health;
       Boss.Feed(soup);
             _anim.SetTrigger("Eat");
+            var clip = _slurpsClips[Random.Range(0, _slurpsClips.Count)];
+            _audioSource.PlayOneShot(clip);
             ResetTransform();
       StartCoroutine(UpdateSliders(hangriness, health));
       return soup.filling > soup.toxicity ? FeedingResponse.AteWell : FeedingResponse.AteFeelingBad;

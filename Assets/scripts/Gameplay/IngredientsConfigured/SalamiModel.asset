@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
-  m_Name: Salami
+  m_Name: SalamiModel
   m_EditorClassIdentifier: 
   ingredientName: Salami
   size: 0.26
@@ -23,4 +23,3 @@ MonoBehaviour:
   sourSweetLevel: -0.41
   freedomForDefects: 0.71
   viscosity: 0.38
-  resourceName: Salami

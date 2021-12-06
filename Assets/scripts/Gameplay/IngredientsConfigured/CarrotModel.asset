@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
   m_Name: CarrotModel
   m_EditorClassIdentifier: 
-  ingredientName: Carrot
+  ingredientName: Carrots
   size: 0.41
   calories: 0.29
   minerals: 0.4
@@ -23,4 +23,3 @@ MonoBehaviour:
   sourSweetLevel: 0.27
   freedomForDefects: 0.67
   viscosity: 0.34
-  resourceName: Carrots

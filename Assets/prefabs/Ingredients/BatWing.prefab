@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BatWing
       objectReference: {fileID: 0}
+    - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+      propertyPath: miniIngredientView
+      value: 
+      objectReference: {fileID: 3881801882789457995, guid: 37e6889e96db64345938490dec0aff12, type: 3}
     - target: {fileID: 8653321594744481807, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

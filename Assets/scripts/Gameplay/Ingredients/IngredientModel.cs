@@ -32,16 +32,9 @@ namespace SnotSoup.Gameplay.Ingredients {
     [Range(0f, 1f)]
     [SerializeField] private float viscosity;
 
-
-    [SerializeField] private string resourceName;
-
     #region Properties
     public string Name {
       get { return ingredientName; }
-    }
-
-    public string ResourceName {
-      get { return resourceName; }
     }
 
     public float Size {

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
-  m_Name: BatWingsModel
+  m_Name: EyeModel
   m_EditorClassIdentifier: 
-  ingredientName: BatWing
-  size: -10
-  calories: 0.3
-  minerals: 0.55
-  vitamins: 0.24
-  saltiness: 0.78
-  bitterness: 0.8
-  acidicPhLevel: -0.14
-  sourSweetLevel: -0.27
-  freedomForDefects: 0.24
-  viscosity: 0.13
+  ingredientName: Eyeball
+  size: 0.12
+  calories: 0.15
+  minerals: 0.24
+  vitamins: 0.21
+  saltiness: 0.58
+  bitterness: 0.13
+  acidicPhLevel: -0.21
+  sourSweetLevel: 0.33
+  freedomForDefects: 0.61
+  viscosity: 0.18

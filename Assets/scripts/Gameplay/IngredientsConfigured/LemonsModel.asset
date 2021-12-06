@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4daa65f3511a42eb9cb48ec78a6c43f, type: 3}
-  m_Name: BatWingsModel
+  m_Name: LemonsModel
   m_EditorClassIdentifier: 
-  ingredientName: BatWing
-  size: -10
-  calories: 0.3
-  minerals: 0.55
-  vitamins: 0.24
-  saltiness: 0.78
-  bitterness: 0.8
-  acidicPhLevel: -0.14
-  sourSweetLevel: -0.27
-  freedomForDefects: 0.24
-  viscosity: 0.13
+  ingredientName: Lemons
+  size: 0.09
+  calories: 0.15
+  minerals: 0.44
+  vitamins: 0.47
+  saltiness: 0.2
+  bitterness: 0.52
+  acidicPhLevel: 0.64
+  sourSweetLevel: -0.64
+  freedomForDefects: 0.14
+  viscosity: 0.2

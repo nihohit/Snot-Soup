@@ -26,9 +26,9 @@ namespace SnotSoup.Gameplay.Ingredients {
     }
 
     protected void Awake() {
-      if (!string.IsNullOrWhiteSpace(model.ResourceName)) {
+      if (!string.IsNullOrWhiteSpace(model.Name)) {
         transform.Find("Graphic").gameObject.SetActive(false);
-        var resource = Resources.Load<GameObject>(model.ResourceName);
+        var resource = Resources.Load<GameObject>(model.Name);
         var instance = Instantiate(resource);
         instance.transform.position = transform.position;
         instance.transform.parent = transform;

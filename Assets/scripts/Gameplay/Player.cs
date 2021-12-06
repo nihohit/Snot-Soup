@@ -25,11 +25,9 @@ public class Player : MonoBehaviour {
       return;
     }
     _smallPromptBox.SetActive(true);
-    if (_target != null && _target != _pickedItem) {
-      _descriptionText.text = _target.Name;
-    } else {
-      _descriptionText.text = _pickedItem.Name;
-    }
+    var foodDescription = (_pickedItem != null ? _pickedItem : _target).GetDescription();
+    var actionDescription = _pickedItem == null ? "Pick up" : _cauldron == null ? "Drop" : "Cook";
+    _descriptionText.text = $"{actionDescription} {foodDescription}";
   }
 
   public void SetPickupTarget(IngredientPicker target) {
@@ -68,13 +66,13 @@ public class Player : MonoBehaviour {
     setIngredientDescription();
   }
 
-    public void OnCook()
-    {
-        _cauldron.Cook();
-    }
+  public void OnCook() {
+    _cauldron.Cook();
+  }
 
   public void SetCauldron(Cauldron drop) {
     _cauldron = drop;
+    setIngredientDescription();
   }
 
 }

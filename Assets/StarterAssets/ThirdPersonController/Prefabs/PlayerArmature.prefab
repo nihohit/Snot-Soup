@@ -1137,8 +1137,6 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   analogMovement: 0
-  cursorLocked: 1
-  cursorInputForLook: 1
 --- !u!114 &4416926081852918493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1249,10 +1247,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2949a52f6fa96b44b57d7640ec4eaed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ingredientParent: {fileID: 0}
+  _ingredientParent: {fileID: 7004564770790126270}
   animator: {fileID: 791669867}
   pickupAnimationTriggerName: Pickup
   placeAnimationTriggerName: Place
+  runAnimationBoolName: RunWithIngredient
   _escMenu: {fileID: 0}
 --- !u!114 &1765335692
 MonoBehaviour:

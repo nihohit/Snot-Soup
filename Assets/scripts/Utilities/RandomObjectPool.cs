@@ -40,21 +40,13 @@ namespace CzernyStudio.Utilities {
     public GameObject GetRandomObject() {
       GameObject spawnedGameObject;
 
-      // if there is an inactive instance of the prefab ready to return, return that
-      if (_inactiveInstances.Count > 0) {
-        // remove the instance from teh collection of inactive instances
-        spawnedGameObject = _inactiveInstances.Pop();
-      }
-      // otherwise, create a new instance
-      else {
-        var randomIndex = Random.Range(0, pooledPrefabs.Length);
-        spawnedGameObject = Instantiate(pooledPrefabs[randomIndex]);
-        var view = spawnedGameObject.GetComponent<SnotSoup.Gameplay.Ingredients.IngredientView>();
-        view.LoadModel();
+      var randomIndex = Random.Range(0, pooledPrefabs.Length);
+      spawnedGameObject = Instantiate(pooledPrefabs[randomIndex]);
+      var view = spawnedGameObject.GetComponent<SnotSoup.Gameplay.Ingredients.IngredientView>();
+      view.LoadModel();
 
-        var pooledObject = spawnedGameObject.GetComponent<PooledObject>();
-        pooledObject.pool = this;
-      }
+      var pooledObject = spawnedGameObject.GetComponent<PooledObject>();
+      pooledObject.pool = this;
 
       // put the instance in the root of this script
       spawnedGameObject.transform.SetParent(transform, false);
@@ -73,8 +65,7 @@ namespace CzernyStudio.Utilities {
         // make the instance a child of this and disable it
         toReturn.SetActive(false);
 
-        // add the instance to the collection of inactive instances
-        _inactiveInstances.Push(toReturn);
+        Destroy(toReturn);
       }
       // otherwise, just destroy it
       else {

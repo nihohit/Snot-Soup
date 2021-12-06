@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BatWingsModel
   m_EditorClassIdentifier: 
   ingredientName: BatWing
-  size: -10
+  size: 0.71
   calories: 0.3
   minerals: 0.55
   vitamins: 0.24

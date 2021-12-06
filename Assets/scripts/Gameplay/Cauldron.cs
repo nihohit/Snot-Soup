@@ -92,8 +92,8 @@ public class Cauldron : MonoBehaviour {
   }
 
   public void Cook() {
-    if (_ingredients.Count == 0) {
-      StartCoroutine(RotateText("DIS IS WATER!\nMAKE SOUP!"));
+    if (_ingredients.Count < 2) {
+      StartCoroutine(RotateText("DIS IS NOT SOUP, IT NEEDS INGREDIENTS!\nMAKE SOUP!"));
       return;
     }
     var soup = SnotSoup.ResultCalculator.getSoupResult(new SnotSoup.CookingInputs(_ingredients));

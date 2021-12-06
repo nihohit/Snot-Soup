@@ -43,7 +43,7 @@ public class ESCMenu : MonoBehaviour
     private void LoadMainMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("IntroScene");
     }
 
     public event Action OnResume;

@@ -10,6 +10,8 @@ public class Player : MonoBehaviour {
   [SerializeField] private string placeAnimationTriggerName = "Place";
   [SerializeField] private string runAnimationBoolName = "RunWithIngredient";
 
+    [SerializeField] ESCMenu _escMenu;
+
   private IngredientPicker _target;
   private IngredientPicker _pickedItem;
   private Cauldron _cauldron;
@@ -95,4 +97,16 @@ public class Player : MonoBehaviour {
     _cauldron = drop;
     setIngredientDescription();
   }
+
+    public void OnESC()
+    {
+        _escMenu.ToggleActive(true);
+        _escMenu.OnResume += Resume;
+    }
+
+    private void Resume()
+    {
+        _escMenu.OnResume -= Resume;
+        _escMenu.ToggleActive(false);
+    }
 }

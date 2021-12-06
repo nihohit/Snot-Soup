@@ -5,12 +5,12 @@ using TMPro;
 public class Player : MonoBehaviour {
   [SerializeField] Transform _ingredientParent;
   [SerializeField] private Animator animator;
-  
+
   [SerializeField] private string pickupAnimationTriggerName = "Pickup";
   [SerializeField] private string placeAnimationTriggerName = "Place";
   [SerializeField] private string runAnimationBoolName = "RunWithIngredient";
 
-    [SerializeField] ESCMenu _escMenu;
+  [SerializeField] ESCMenu _escMenu;
 
   private IngredientPicker _target;
   private IngredientPicker _pickedItem;
@@ -23,9 +23,9 @@ public class Player : MonoBehaviour {
   private int _runAnimationHash;
 
   protected void Awake() {
-      _pickupAnimationHash = Animator.StringToHash(pickupAnimationTriggerName);
-      _placeAnimationHash = Animator.StringToHash(placeAnimationTriggerName);
-      _runAnimationHash = Animator.StringToHash(runAnimationBoolName);
+    _pickupAnimationHash = Animator.StringToHash(pickupAnimationTriggerName);
+    _placeAnimationHash = Animator.StringToHash(placeAnimationTriggerName);
+    _runAnimationHash = Animator.StringToHash(runAnimationBoolName);
   }
 
   private void Start() {
@@ -85,12 +85,14 @@ public class Player : MonoBehaviour {
 
   public void OnMove() {
     if (_pickedItem != null) {
-        animator.SetBool(_runAnimationHash, true);
+      animator.SetBool(_runAnimationHash, true);
     }
   }
 
   public void OnCook() {
-    _cauldron.Cook();
+    if (_cauldron != null) {
+      _cauldron.Cook();
+    }
   }
 
   public void SetCauldron(Cauldron drop) {
@@ -98,15 +100,13 @@ public class Player : MonoBehaviour {
     setIngredientDescription();
   }
 
-    public void OnESC()
-    {
-        _escMenu.ToggleActive(true);
-        _escMenu.OnResume += Resume;
-    }
+  public void OnESC() {
+    _escMenu.ToggleActive(true);
+    _escMenu.OnResume += Resume;
+  }
 
-    private void Resume()
-    {
-        _escMenu.OnResume -= Resume;
-        _escMenu.ToggleActive(false);
-    }
+  private void Resume() {
+    _escMenu.OnResume -= Resume;
+    _escMenu.ToggleActive(false);
+  }
 }

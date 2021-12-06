@@ -19,7 +19,8 @@ MonoBehaviour:
   vitamins: 0.24
   saltiness: 0.78
   bitterness: 0.8
-  acidicPhLevel: 0.94
+  acidicPhLevel: -0.14
   sourSweetLevel: -0.27
   freedomForDefects: 0.24
   viscosity: 0.13
+  resourceName: 

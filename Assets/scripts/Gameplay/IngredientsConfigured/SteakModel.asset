@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: SteakModel
   m_EditorClassIdentifier: 
   ingredientName: Steak
-  size: 0.02
-  calories: 0.02
-  minerals: 0.05
-  vitamins: 0.01
-  saltiness: 1
+  size: 0.78
+  calories: 0.82
+  minerals: 0.34
+  vitamins: 0.34
+  saltiness: 0.58
   bitterness: 0.1
   acidicPhLevel: 0.7
-  sourSweetLevel: -1
-  freedomForDefects: 0.05
-  viscosity: 0.06
+  sourSweetLevel: -0.14
+  freedomForDefects: 0.74
+  viscosity: 0.72
   resourceName: Steak

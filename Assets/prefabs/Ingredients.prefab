@@ -80,16 +80,12 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 808620621431161795}
   - {fileID: 7356849701197267311}
-  - {fileID: 0}
-  - {fileID: 755168298244495465}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 8193603258989626239}
-  - {fileID: 3077754198087584688}
   - {fileID: 5640261429182418513}
-  - {fileID: 0}
+  - {fileID: 755168298244495465}
   - {fileID: 759744100167937759}
   - {fileID: 3734536775803203162}
+  - {fileID: 8193603258989626239}
+  - {fileID: 3077754198087584688}
 --- !u!114 &1775666071590908579
 MonoBehaviour:
   m_ObjectHideFlags: 0

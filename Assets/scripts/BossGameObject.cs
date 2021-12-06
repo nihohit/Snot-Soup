@@ -13,6 +13,9 @@ namespace SnotSoup {
     private Mood lastMood = Mood.Happy;
     private bool slideranimationInProgress = false;
 
+        private Vector3 _initialPos;
+        private Quaternion _initialRot;
+
         [SerializeField] Animator _anim;
 
     private void Start() {
@@ -21,6 +24,8 @@ namespace SnotSoup {
       slider = GameObject.Find("HangerSlider");
       hangerSlider = GameObject.Find("HangerSlider").GetComponent<Slider>();
       Boss.Reset();
+            _initialPos = transform.position;
+            _initialRot = transform.rotation;
     }
 
     private void Update() {
@@ -66,6 +71,7 @@ namespace SnotSoup {
       var health = Boss.Health;
       Boss.Feed(soup);
             _anim.SetTrigger("Eat");
+            ResetTransform();
       StartCoroutine(UpdateSliders(hangriness, health));
       return soup.filling > soup.toxicity ? FeedingResponse.AteWell : FeedingResponse.AteFeelingBad;
     }
@@ -74,5 +80,11 @@ namespace SnotSoup {
     {
         SceneManager.LoadScene("WinScreen");
     }
+
+        private void ResetTransform()
+        {
+            transform.position = _initialPos;
+            transform.rotation = _initialRot;
+        }
   }
 }

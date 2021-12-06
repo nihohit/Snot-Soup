@@ -18,7 +18,7 @@ namespace SnotSoup {
     }
 
     public static void Tick() {
-      Hangriness += Time.deltaTime;
+      Hangriness += Time.deltaTime * 1.5f;
     }
 
     public static void Feed(FinishedSoup soup) {

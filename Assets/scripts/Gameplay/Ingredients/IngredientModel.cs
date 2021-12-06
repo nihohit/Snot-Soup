@@ -22,7 +22,7 @@ namespace SnotSoup.Gameplay.Ingredients {
     [Range(0f, 1f)]
     [SerializeField] private float bitterness;
     [Tooltip("When 3 = acidic, 5 = neutral, 10 = alkaline")]
-    [Range(0f, 1f)]
+    [Range(-1f, 1f)]
     [SerializeField] private float acidicPhLevel;
     [Range(-1f, 1f)]
     [SerializeField] private float sourSweetLevel;

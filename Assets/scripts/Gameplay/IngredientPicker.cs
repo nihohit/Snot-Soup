@@ -41,6 +41,7 @@ public class IngredientPicker : MonoBehaviour {
 
   public void Unbind() {
     _rb.isKinematic = false;
+    _rb.velocity = Vector3.zero;
     _ingredient.transform.parent = null;
   }
 

@@ -19,8 +19,8 @@ MonoBehaviour:
   vitamins: 0.26
   saltiness: 0.77
   bitterness: 0.26
-  acidicPhLevel: 0.5
+  acidicPhLevel: -0.39
   sourSweetLevel: -0.15
-  freedomForDefects: 0.82
-  viscosity: 0.24
+  freedomForDefects: 0.62
+  viscosity: 0.38
   resourceName: Cheese

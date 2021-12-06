@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Shrimp
   size: 0.09
-  calories: 0.09
-  minerals: 0.1
-  vitamins: 0.04
-  saltiness: 0.05
-  bitterness: 1
-  acidicPhLevel: 0.06
-  sourSweetLevel: -1
-  freedomForDefects: 0.02
-  viscosity: 0.02
+  calories: 0.35
+  minerals: 0.35
+  vitamins: 0.34
+  saltiness: 0.8
+  bitterness: 0.82
+  acidicPhLevel: 0.29
+  sourSweetLevel: -0.35
+  freedomForDefects: 0.42
+  viscosity: 0.23
   resourceName: Shrimp

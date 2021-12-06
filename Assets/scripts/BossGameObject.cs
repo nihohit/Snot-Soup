@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections;
+using UnityEngine.SceneManagement;
 namespace SnotSoup {
 
   public enum FeedingResponse { AteWell, AteFeelingBad, Refused };
@@ -10,6 +11,7 @@ namespace SnotSoup {
     private Slider hangerSlider;
 
     private Mood lastMood = Mood.Happy;
+    private bool slideranimationInProgress = false;
 
     private void Start() {
       var slider = GameObject.Find("HealthSlider");
@@ -25,22 +27,46 @@ namespace SnotSoup {
       }
 
       Boss.Tick();
-      healthSlider.value = Boss.Health / Boss.MAX_HEALTH;
-      hangerSlider.value = Boss.Hangriness / Boss.MAX_HANGER;
+      if (!slideranimationInProgress) {
+        hangerSlider.value = Boss.Hangriness / Boss.MAX_HANGER;
+      }
 
       var mood = Boss.getMood();
       if (mood == lastMood) {
         return;
       }
+      if (mood == Mood.EatingThePlayer) {
+        SceneManager.LoadScene("LoseScreen");
+      }
       // TODO - do something
       lastMood = mood;
+    }
+
+    private IEnumerator UpdateSliders(float initialHangriness, float initialHealth) {
+      slideranimationInProgress = true;
+      var duration = 1.5f;
+      var initialTime = System.DateTime.Now;
+      var offset = 0f;
+      while (offset <= duration) {
+        yield return null;
+        offset = (float)(System.DateTime.Now - initialTime).TotalSeconds;
+        hangerSlider.value = Mathf.Lerp(initialHangriness, Boss.Hangriness, offset / duration) / Boss.MAX_HANGER;
+        healthSlider.value = Mathf.Lerp(initialHealth, Boss.Health, offset / duration) / Boss.MAX_HEALTH;
+      }
+      if (Boss.Health <= 0) {
+        SceneManager.LoadScene("WinScreen");
+      }
+      slideranimationInProgress = false;
     }
 
     public FeedingResponse TryFeed(FinishedSoup soup) {
       if (!Boss.willingToEat(soup)) {
         return FeedingResponse.Refused;
       }
+      var hangriness = Boss.Hangriness;
+      var health = Boss.Health;
       Boss.Feed(soup);
+      StartCoroutine(UpdateSliders(hangriness, health));
       return soup.filling > soup.toxicity ? FeedingResponse.AteWell : FeedingResponse.AteFeelingBad;
     }
   }

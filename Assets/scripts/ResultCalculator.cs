@@ -38,7 +38,7 @@ namespace SnotSoup {
 
       //3. give weight to values
       var computedToxicity = (0.5f * normalizedAcidity) + (0.5f * normalizedFOD);
-      return computedToxicity;
+      return computedToxicity - 0.25f; // we
     }
 
     private static float computeYumminess(CookingInputs inputs) {

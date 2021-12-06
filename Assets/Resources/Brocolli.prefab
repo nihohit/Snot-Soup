@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5987043688060941049}
   - component: {fileID: 7258002794342448476}
   - component: {fileID: 4854155132235024790}
+  - component: {fileID: -8809170495760658250}
   m_Layer: 0
   m_Name: Brocolli
   m_TagString: Untagged
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-8809170495760658250
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367403983521032259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3644542, y: 0.6208065, z: 0.62865746}
+  m_Center: {x: -0.016284376, y: 0.3122553, z: -0.044191197}

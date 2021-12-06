@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4085945765477679611}
   - component: {fileID: 1088720555810491998}
   - component: {fileID: 2954113803015486100}
+  - component: {fileID: 1179118763332111234}
   m_Layer: 0
-  m_Name: CheeseMold
+  m_Name: CheeseMold 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1179118763332111234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3746962635178859329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e37f80794b4c4ea18ca2dd75c7ab3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2

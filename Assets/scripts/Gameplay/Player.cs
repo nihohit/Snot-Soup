@@ -8,7 +8,6 @@ public class Player : MonoBehaviour {
 
   [SerializeField] private string pickupAnimationTriggerName = "Pickup";
   [SerializeField] private string placeAnimationTriggerName = "Place";
-  [SerializeField] private string runAnimationBoolName = "RunWithIngredient";
 
   [SerializeField] ESCMenu _escMenu;
 
@@ -20,12 +19,10 @@ public class Player : MonoBehaviour {
   private TMP_Text _descriptionText;
   private int _pickupAnimationHash;
   private int _placeAnimationHash;
-  private int _runAnimationHash;
 
   protected void Awake() {
     _pickupAnimationHash = Animator.StringToHash(pickupAnimationTriggerName);
     _placeAnimationHash = Animator.StringToHash(placeAnimationTriggerName);
-    _runAnimationHash = Animator.StringToHash(runAnimationBoolName);
   }
 
   private void Start() {
@@ -81,12 +78,6 @@ public class Player : MonoBehaviour {
       _pickedItem = null;
     }
     setIngredientDescription();
-  }
-
-  public void OnMove() {
-    if (_pickedItem != null) {
-      animator.SetBool(_runAnimationHash, true);
-    }
   }
 
   public void OnCook() {

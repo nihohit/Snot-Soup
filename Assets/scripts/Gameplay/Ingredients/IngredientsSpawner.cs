@@ -5,10 +5,12 @@ using UnityEngine;
 namespace SnotSoup.Gameplay.Ingredients {
     public class IngredientsSpawner : MonoBehaviour {
         [SerializeField] private RandomObjectPool pool;
+        [SerializeField] private AudioSource dropIngredientSource;
         [SerializeField] private Transform[] spawnPoints;
 
         public static Action<Vector3> OnRespawnIngredient;
         public static Action<GameObject> OnReturnIngredientToPool;
+
         
         protected void Awake() {
             OnRespawnIngredient += ReSpawnRandomIngredientAtPosition;
@@ -26,10 +28,12 @@ namespace SnotSoup.Gameplay.Ingredients {
             for (int i = 0; i < spawnPoints.Length; i++) {
                 var ingredient = pool.GetObject(i);
                 ingredient.transform.position = spawnPoints[i].position;
+                ingredient.GetComponent<IngredientView>().SpawnPosition = spawnPoints[i].position;
             }
         }
   
         private void ReSpawnRandomIngredientAtPosition(Vector3 spawnPosition) {
+            dropIngredientSource?.Play();
             var ingredientObject = pool.GetRandomObject();
             var ingredientView = ingredientObject.GetComponent<IngredientView>();
             if (ingredientView == null) return;

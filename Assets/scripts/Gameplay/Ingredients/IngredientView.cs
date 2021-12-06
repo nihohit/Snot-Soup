@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace SnotSoup.Gameplay.Ingredients{
-    public class IngredientView : MonoBehaviour {
-        [SerializeField] private IngredientModel model;
-        [SerializeField] private IngredientPicker _picker;
+namespace SnotSoup.Gameplay.Ingredients {
+  public class IngredientView : MonoBehaviour {
+    [SerializeField] private IngredientModel model;
 
     public string Name { get { return model.Name; } }
     public string Description { get { return model.Description; } }
@@ -24,17 +23,7 @@ namespace SnotSoup.Gameplay.Ingredients{
         _spawnPosition = value;
       }
     }
-        protected void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("Cauldron"))
-            {
-                var c = collision.gameObject.GetComponent<Cauldron>();
-                c.Add(model);
-                _picker.enabled = true;
-                IngredientsSpawner.OnRespawnIngredient(_spawnPosition);
-                IngredientsSpawner.OnReturnIngredientToPool(gameObject);
-            }
-        }
+
     protected void Awake() {
       _spawnPosition = transform.localPosition;
       if (!string.IsNullOrWhiteSpace(model.ResourceName)) {
@@ -43,6 +32,15 @@ namespace SnotSoup.Gameplay.Ingredients{
         var instance = Instantiate(resource);
         instance.transform.position = transform.position;
         instance.transform.parent = transform;
+      }
+    }
+
+    protected void OnCollisionEnter(Collision collision) {
+      if (collision.gameObject.CompareTag("Cauldron")) {
+        var c = collision.gameObject.GetComponent<Cauldron>();
+        c.Add(model);
+        IngredientsSpawner.OnRespawnIngredient(_spawnPosition);
+        IngredientsSpawner.OnReturnIngredientToPool(gameObject);
       }
     }
   }

@@ -14,7 +14,7 @@ public class Cauldron : MonoBehaviour {
   private System.Random _random = new System.Random();
 
   private Dictionary<SnotSoup.FeedingResponse, string[]> _responses = new Dictionary<SnotSoup.FeedingResponse, string[]>() {
-      { SnotSoup.FeedingResponse.Ate, new[] {
+      { SnotSoup.FeedingResponse.AteWell, new[] {
           "NOM NOM NOM",
           "THIS IS YUMMY",
           "I LIKE",
@@ -22,10 +22,20 @@ public class Cauldron : MonoBehaviour {
           "I WANT MOAR",
           "FOOD! FOODFOODFOOD",
         }},
+      { SnotSoup.FeedingResponse.AteFeelingBad, new[] {
+          "TUMMY FEEL BAD",
+          "OOOOH NOOOOO",
+          "TASTE WEIRD",
+          "OHHHHHH, NOOOOES",
+          "I SICK?",
+          "MAYBE I HURL A BIT"
+        }},
       { SnotSoup.FeedingResponse.Refused, new[] {
           "NO YUMMY",
           "BLEARGH",
-          "I NO EAT DIS"
+          "I NO EAT DIS",
+          "DIS LIKE POO",
+          "DON'T WANNA"
       }}
 };
 

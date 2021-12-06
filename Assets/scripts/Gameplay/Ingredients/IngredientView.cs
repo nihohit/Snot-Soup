@@ -4,8 +4,8 @@ namespace SnotSoup.Gameplay.Ingredients {
   public class IngredientView : MonoBehaviour {
     [SerializeField] private IngredientModel model;
     [SerializeField] private GameObject miniIngredientView;
-        [SerializeField] private IngredientPicker _picker;
-  
+    [SerializeField] private IngredientPicker _picker;
+
     public string Name { get { return model.Name; } }
     public string Description { get { return model.Description; } }
 
@@ -26,15 +26,18 @@ namespace SnotSoup.Gameplay.Ingredients {
       }
     }
 
-    protected void Awake() {
+    protected void Start() {
       if (!string.IsNullOrWhiteSpace(model.Name)) {
-        transform.Find("Graphic").gameObject.SetActive(false);
-        var resource = Resources.Load<GameObject>(model.Name);
-        var instance = Instantiate(resource);
-        instance.transform.position = transform.position;
-        instance.transform.parent = transform;
+        LoadModel();
       }
+    }
 
+    public void LoadModel() {
+      transform.Find("Graphic").gameObject.SetActive(false);
+      var resource = Resources.Load<GameObject>(model.Name);
+      var instance = Instantiate(resource);
+      instance.transform.position = transform.position;
+      instance.transform.parent = transform;
     }
 
     protected void OnCollisionEnter(Collision collision) {

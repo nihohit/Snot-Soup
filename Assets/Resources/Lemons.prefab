@@ -170,8 +170,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182776224022208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -74.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4930236914811838}
   - {fileID: 4532436663474584}
@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 4931171396214266}
   - component: {fileID: 33202551106062618}
   - component: {fileID: 23541190569481306}
+  - component: {fileID: 5968179766170537910}
   m_Layer: 0
   m_Name: Lemon1_Mid__350_Tris_
   m_TagString: Untagged
@@ -360,6 +361,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5968179766170537910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248339520936650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9571128, y: 2.8966937, z: 3.749718}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1264924303658754
 GameObject:
   m_ObjectHideFlags: 0

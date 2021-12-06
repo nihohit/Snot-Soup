@@ -26,6 +26,13 @@ namespace SnotSoup.Gameplay.Ingredients {
 
     protected void Awake() {
       _spawnPosition = transform.localPosition;
+      if (!string.IsNullOrWhiteSpace(model.ResourceName)) {
+        transform.Find("Graphic").gameObject.SetActive(false);
+        var resource = Resources.Load<GameObject>(model.ResourceName);
+        var instance = Instantiate(resource);
+        instance.transform.position = transform.position;
+        instance.transform.parent = transform;
+      }
     }
 
     protected void OnCollisionEnter(Collision collision) {

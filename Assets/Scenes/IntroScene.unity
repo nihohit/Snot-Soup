@@ -207,7 +207,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.6
+  m_fontSize: 24.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.05
+  m_fontSize: 26.7
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.05
+  m_fontSize: 28.15
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -778,7 +778,8 @@ MonoBehaviour:
   m_text: "Today I'm cooking for The Eternally Hungry Grokzord. I thought - no biggie.
     Not my first time feeding a massive beast who will eat me if what I make isn't
     good. \n\nBut now I have a cold. I'm so stuffed up, I can't tell which ingredients
-    are still good :( Let's hope The Eternally Hungry Grokzord won't notice."
+    are still good :( Let's hope The Eternally Hungry Grokzord won't notice, or that
+    maybe I'll feed him something so rotten he'll drop dead."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -805,7 +806,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.6
+  m_fontSize: 42.9
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1

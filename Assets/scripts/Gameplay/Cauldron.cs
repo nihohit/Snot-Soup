@@ -11,8 +11,23 @@ public class Cauldron : MonoBehaviour {
   private GameObject _smallPromptBox;
   private TMP_Text _descriptionText;
 
-  private Dictionary<SnotSoup.FeedingResponse, string> _responses = new Dictionary<SnotSoup.FeedingResponse, string>() { { SnotSoup.FeedingResponse.Ate, "Looks good!" },
-                                                                                                                           { SnotSoup.FeedingResponse.Refused, "Get that out of my face!" } };
+  private System.Random _random = new System.Random();
+
+  private Dictionary<SnotSoup.FeedingResponse, string[]> _responses = new Dictionary<SnotSoup.FeedingResponse, string[]>() {
+      { SnotSoup.FeedingResponse.Ate, new[] {
+          "NOM NOM NOM",
+          "THIS IS YUMMY",
+          "I LIKE",
+          "GIVE MOARRRRRR",
+          "I WANT MOAR",
+          "FOOD! FOODFOODFOOD",
+        }},
+      { SnotSoup.FeedingResponse.Refused, new[] {
+          "NO YUMMY",
+          "BLEARGH",
+          "I NO EAT DIS"
+      }}
+};
 
   public Vector3 IngredientDrop { get { return _ingredientDrop.position; } }
 
@@ -68,12 +83,13 @@ public class Cauldron : MonoBehaviour {
 
   public void Cook() {
     if (_ingredients.Count == 0) {
-      StartCoroutine(RotateText("That's just water!\nMAKE ME SOUP!"));
+      StartCoroutine(RotateText("DIS IS WATER!\nMAKE SOUP!"));
       return;
     }
     var soup = SnotSoup.ResultCalculator.getSoupResult(new SnotSoup.CookingInputs(_ingredients));
     var response = _boss.TryFeed(soup);
-    StartCoroutine(RotateText(_responses[response]));
+    var responseList = _responses[response];
+    StartCoroutine(RotateText(responseList[_random.Next(responseList.Length)]));
     _ingredients.Clear();
   }
 }

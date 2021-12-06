@@ -51,9 +51,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3122557871998079134, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4979168398517805273, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: m_Name
-      value: Salt
+      value: Steak
       objectReference: {fileID: 0}
     - target: {fileID: 5003941827458261470, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
       propertyPath: model
@@ -61,3 +65,85 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 3231df031dba44f538f7e9f5c06655ea, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+--- !u!4 &5795890694282677394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 62263297109037804, guid: 6b0bd296b9a03844aa0b788224b1f1c6, type: 3}
+  m_PrefabInstance: {fileID: 5814736197037891198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6714782479193742306
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5795890694282677394}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.191
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7918335002988649766, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e533f59e755fd3d499c75139d7748609, type: 2}
+    - target: {fileID: -2268138116939433651, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: caf655524f6652e4ea83512741608f8a, type: 2}
+    - target: {fileID: 919132149155446097, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}
+      propertyPath: m_Name
+      value: Salt
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d65eb0eb01b885140bb4c3597b63b100, type: 3}

@@ -85,9 +85,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: '
-
-    Transform ''Skeleton'' has been deleted'
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -287,6 +285,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ingredientParent: {fileID: 0}
+--- !u!95 &8541348274160459898
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932293424260234358}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8338988566280778634
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +435,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fbc08310613f9704784f267b7b0123ef, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124fa48c0ecd9f54d8caa41bedc2d49d, type: 3}
+--- !u!1 &5932293424260234358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 124fa48c0ecd9f54d8caa41bedc2d49d, type: 3}
+  m_PrefabInstance: {fileID: 6814742977146487079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6420002063880218316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 124fa48c0ecd9f54d8caa41bedc2d49d, type: 3}
